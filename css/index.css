@@ -1,0 +1,24 @@
+index{
+  background-color: #add8e6
+}
+main{
+  text-align: center;
+}
+
+
+#gray-header{
+  text-align: center;
+  color: gray;
+  font-style: oblique;
+}
+
+
+a{
+  color: gray;
+  font-size: 25px;
+float: right;
+}
+p{color: gray;
+font-size: 25px;
+float: right;
+}

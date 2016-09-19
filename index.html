@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<main>
+
+<head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/main.css">
+
+<link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <ui-view>
+      <div class="content">
+      <div class="top">
+          <h1 id="gray-header">Community Store</h1>
+          <h3 id="gray-header">Sell, Earn, and Save</h3>
+      </div>
+      <br>
+      <br>
+  <div id="object" class="hatch">
+        <button ui-sref="main">Enter Here</button>
+
+        </div>
+        <br>
+        <br>
+        <br>
+            <img src="http://images.clipartpanda.com/store-clipart-store-md.png" alt="" />
+    </ui-view>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+	$(window).scroll(function() {
+		$('#button').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).addClass("hatch");
+			}
+		})
+	});
+</script>
+</body>
+
+</main>
+
+</html>

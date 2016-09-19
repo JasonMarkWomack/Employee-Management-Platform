@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/secpartial.css" >
+  <h1>Special Deals</h1>
+<button ui-sref="home">home</button>
+<button ui-sref="partial">For Sale</button>
+
+<div class="wide-box"></div>
+<div ng-init="objs = [{item:'Weights', cost:'55'},
+                         {item:'Table', cost:'80'},
+                         {item:'Movie', cost:'21'},
+                         {item:'Baseball', cost:'5'},
+                         {item:'TV', cost:'65'},
+                         {item:'Ax', cost:'78'}]"></div>
+
+
+<label>Search: <input ng-model="searchText"></label>
+
+<table id="searchTextResults">
+  <tr><th>Item</th><th>Cost</th></tr>
+  <tr ng-repeat="obj in objs | filter:searchText">
+    <td>{{obj.item}}</td>
+    <td>{{obj.cost}}</td>
+  </tr>
+</table>
+<img src="http://images.clipartpanda.com/store-clipart-store-md.png" alt="" />
+<script src="src/secpartial">
+
+</script>

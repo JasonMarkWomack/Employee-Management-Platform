@@ -1,0 +1,26 @@
+
+.objs {
+  border-collapse: collapse;
+}
+
+.objs th {
+  border-bottom: 1px solid;
+}
+.objs td, .objs th {
+  border-left: 1px solid;
+  padding: 5px 10px;
+}
+.objs td:first-child, .objs th:first-child {
+  border-left: none;
+}
+
+.sortorder:after {
+  content: '\25b2';
+}
+.sortorder.reverse:after {
+  content: '\25bc';
+}
+h1
+{
+  color: gray;
+}
