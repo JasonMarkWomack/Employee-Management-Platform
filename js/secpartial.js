@@ -1,6 +1,6 @@
-var expectObjItems = function(expectedItems, key) {
+var expectObjItems = function(expectedItems, key) { //params
   element.all(by.repeater(key + ' in objs').column(key + '.name')).then(function(arr) {
-    arr.forEach(function(wd, i) {
+    arr.forEach(function(wd, i) { ///params
       expect(wd.getText()).toMatch(expectedItems[i]);
     });
   });
@@ -9,10 +9,10 @@ var expectObjItems = function(expectedItems, key) {
 it('should search across all fields when filtering with a string', function() {
   var searchText = element(by.model('searchText'));
   searchText.clear();
-  searchText.sendKeys('m');
+  searchText.sendKeys('y');
   expectObjItems(['Table', 'Movie', 'Baseball'], 'obj');
 
   searchText.clear();
-  searchText.sendKeys('76');
+  searchText.sendKeys('1');
   expectObjItems(['TV', 'Ax'], 'obj');
 });
