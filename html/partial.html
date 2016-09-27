@@ -1,28 +1,28 @@
 <main>
 
 <link rel="stylesheet" href="css/partial.css" >
-<h1>Items For Sale</h1>
+<h1>List of Managers</h1>
 <button ui-sref="home">home</button>
 <link rel="stylesheet" href="css/partial.css" >
 
-<button ui-sref="secpartial">Special Deals</button>
+<button ui-sref="secpartial">List of Associates</button>
 
-<!---the ngInit directive allows you to evaluate an expression in the current scope.-->
-<div ng-init="objs = [{item:'Pants', cost:'3'},
-                         {item:'Toy', cost:'10'},
-                         {item:'CD', cost:'12'},
-                         {item:'CoffePot', cost:'7'},
-                         {item:'Book', cost:'15'},
-                         {item:'ToolBox', cost:'60'}]"></div>
+<!--the ngInit directive allows you to evaluate an expression in the current scope.-->
+<div ng-init="objs = [{name:'Paul', id:'3'},
+                         {name:'Tom', id:'10'},
+                         {name:'Cal', id:'12'},
+                         {name:'Joe', id:'7'},
+                         {name:'Dale', id:'15'},
+                         {name:'Bob', id:'60'}]"></div>
 
 
 <label>Search: <input ng-model="searchText"></label>
 
 <table id="searchTextResults">
-  <tr><th>Item</th><th>Cost</th></tr>
+  <tr><th>Name</th><th>ID</th></tr>
   <tr ng-repeat="obj in objs | filter:searchText">
-    <td>{{obj.item}}</td>
-    <td>{{obj.cost}}</td>
+    <td>{{obj.name}}</td>
+    <td>{{obj.id}}</td>
   </tr>
 </table>
 

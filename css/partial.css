@@ -1,3 +1,4 @@
+main{background-color: #add8e6}
 body{
   text-align: center;
 }
@@ -8,7 +9,7 @@ body{
 .objs th {
   border-bottom: 1px solid;
 }
-.objs td, .objs th {
+.objs td, .objs th { 
   border-left: 1px solid;
   padding: 5px 10px;
 }

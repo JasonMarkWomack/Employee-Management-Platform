@@ -15,9 +15,9 @@ it('should search across all fields when filtering with a string', function() {
   var searchText = element(by.model('searchText')); //will be found in html
   searchText.clear();
   searchText.sendKeys('x');
-  expectObjItems(['Desk', 'CD', 'CoffePot'], 'obj');
+  expectObjItems(['Paul', 'Cal', 'Tom'], 'obj');
 
   searchText.clear();
   searchText.sendKeys('0');
-  expectObjItems(['Book', 'ToolBox'], 'obj');
+  expectObjItems(['Joe', 'Bob'], 'obj');
 });

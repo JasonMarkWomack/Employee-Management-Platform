@@ -1,24 +1,24 @@
 <link rel="stylesheet" href="css/secpartial.css" >
-  <h1>Special Deals</h1>
+  <h1>List of Associates</h1>
 <button ui-sref="home">home</button>
-<button ui-sref="partial">For Sale</button>
+<button ui-sref="partial">List of Managers</button>
 
 <div class="wide-box"></div>
-<div ng-init="objs = [{item:'Weights', cost:'55'},
-                         {item:'Table', cost:'80'},
-                         {item:'Movie', cost:'21'},
-                         {item:'Baseball', cost:'5'},
-                         {item:'TV', cost:'65'},
-                         {item:'Ax', cost:'78'}]"></div>
+<div ng-init="objs = [{name:'Will', id:'55'},
+                         {name:'Tina', id:'80'},
+                         {name:'Mary', id:'21'},
+                         {name:'Bonny', id:'5'},
+                         {name:'Victor', id:'65'},
+                         {name:'Al', id:'78'}]"></div>
 
 
 <label>Search: <input ng-model="searchText"></label>
 
 <table id="searchTextResults">
-  <tr><th>Item</th><th>Cost</th></tr>
+  <tr><th>Name</th><th>ID</th></tr>
   <tr ng-repeat="obj in objs | filter:searchText">
-    <td>{{obj.item}}</td>
-    <td>{{obj.cost}}</td>
+    <td>{{obj.name}}</td>
+    <td>{{obj.id}}</td>
   </tr>
 </table>
 <img src="http://images.clipartpanda.com/store-clipart-store-md.png" alt="" />
